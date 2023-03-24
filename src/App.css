@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+@import "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap";
+
+/* marginal font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 600px;
+}
+
+.header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+
+.main h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+    font-family: "Orbitron", sans-serif;
+    word-break: break-word;
+    width: 100%;
+    padding: 0 24rem;
+}
+
+.date h2 {
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    margin: 1rem auto;
+    font-family: 'Poppins', sans-serif;
+    word-break: break-word;
+    width: 100%;
+    padding: 0 24rem;
+    font-size: 2.25rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1024px;
+    gap: 1.5rem;
+    margin: 1.25rem auto;
+    text-align: center;
+    width: 400px;
+    padding-left: 1rem;
+}
+
+.salah {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    font-size: 1.25rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.salah h3 {
+    font-size: 2rem;
+}
+
+.salah p {
+    font-size: 2.25rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.city select{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 10px 10px  0 0;
+    outline: none;
+    border: none;
+    padding: 1rem 2rem;
+    text-align: center;
+
+}
