@@ -49,6 +49,11 @@
     padding: 0 24rem;
 }
 
+.date {
+    width: 30%;
+    margin: 0 auto;
+}
+
 .date h2 {
     font-weight: 400;
     color: #fff;
@@ -57,7 +62,6 @@
     font-family: 'Poppins', sans-serif;
     word-break: break-word;
     width: 100%;
-    padding: 0 24rem;
     font-size: 2.25rem;
 }
 
@@ -93,7 +97,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.city select{
+.city select {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -102,10 +106,519 @@
     font-weight: 600;
     text-transform: uppercase;
     font-family: 'Orbitron', sans-serif;
-    border-radius: 10px 10px  0 0;
+    border-radius: 10px 10px 0 0;
     outline: none;
     border: none;
     padding: 1rem 2rem;
     text-align: center;
+}
+
+.inner-container {
+    display: flex;
+    align-items: center;
+}
+
+.btn-imsakiye {
+    position: absolute;
+    bottom: 50%;
+    transform: translate(0, -50%) rotate(-270deg);
+    left: -60px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 10px 10px 0 0;
+    outline: none;
+    border: none;
+    padding: 1rem 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+}
+
+.modal-content {
+    width: 60%;
+    height: 50%;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.modal-content .modal-header {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #15a7c3;
+}
+
+.modal-content .modal-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.modal-content .modal-header button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.modal-content .modal-body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-y: auto;
+}
+
+.modal-content .modal-body::-webkit-scrollbar {
+    width: 10px;
+}
+
+.modal-content .modal-body::-webkit-scrollbar-track {
+    background: #ccc;
+}
+
+.modal-content .modal-body::-webkit-scrollbar-thumb {
+    background: #15a7c3;
+}
+
+.modal-content .modal-body table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+.modal-content .modal-body tr {
+    border-bottom: 1px solid #ccc;
+}
+
+.modal-content .modal-body th, tr, td {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem 0;
+}
+
+.modal-content .modal-body thead {
+    background-color: #15a7c3;
+    color: #fff;
+    position: sticky;
+    top: 0;
+}
+
+.modal-content .modal-body thead th {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    padding: .5rem 1rem;
+}
+
+.active {
+    background-color: #e2e2e2;
+}
+
+
+.modal-content .modal-body tbody tr {
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.modal-content .modal-body tbody tr:hover {
+    background-color: #cfecf9;
+}
+
+/* responsive */
+
+
+
+
+/* large desktop */
+@media screen and (max-width: 2000px){
+    .main {
+        top: 45%;
+        transform: translate(-50%, -45%);
+    }
+
+    .main h1 {
+        font-size: 1.75rem;
+        padding: 0;
+    }
+
+    .btn-imsakiye {
+        font-size: 1.25rem;
+    }
+
+    #city {
+        font-size: 1.25rem;
+        position: relative;
+        padding: .6rem 1rem;
+    }
+
+    .container {
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -65%);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .container .date {
+        width: 70%;
+        font-size: 1.75rem;
+        margin-top: 1rem;
+    }
+
+    .container .date h2 {
+        font-size: 1.5rem;
+    }
+
+    .container .content {
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .container .content .salah h3 {
+        font-size: 1.75rem;
+    }
+
+    .modal-content {
+        width: 90%;
+        height: 90%;
+    }
+
+    .modal-content .modal-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .modal-content .modal-header button {
+        font-size: 1.5rem;
+    }
+
+    .modal-content .modal-body th:nth-child(1) {
+        display: none;
+    }
+
+    .modal-content .modal-body td:nth-child(1) {
+        display: none;
+    }
+
+    .modal-content .modal-body thead th {
+        font-size: .75rem;
+        padding: .25rem .5rem;
+    }
+
+    .modal-content .modal-body th, tr, td {
+        font-size: .75rem;
+        padding: .25rem .5rem;
+    }
+
+    thead, tbody {
+        display: block;
+        width: 100%;
+    }
+}
+/* desktop */
+@media screen and (max-width: 1440px){
+    .main {
+        top: 45%;
+        transform: translate(-50%, -45%);
+    }
+
+    .main h1 {
+        font-size: 2rem;
+        padding: 0;
+    }
+
+    .btn-imsakiye {
+        font-size: 1.5rem;
+    }
+
+    #city {
+        font-size: 1.5rem;
+        position: relative;
+        padding: .6rem 1rem;
+    }
+
+    .container {
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -65%);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .container .date {
+        width: 70%;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .container .date h2 {
+        font-size: 1.75rem;
+    }
+
+    .container .content {
+        width: 100%;
+        gap: .5rem;
+    }
+
+    .container .content .salah h3 {
+        font-size: 1.5rem;
+    }
+
+    .modal-content {
+        width: 90%;
+        height: 90%;
+    }
+
+    .modal-content .modal-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .modal-content .modal-header button {
+        font-size: 1.5rem;
+    }
+
+    .modal-content .modal-body th:nth-child(1) {
+        display: none;
+    }
+
+    .modal-content .modal-body td:nth-child(1) {
+        display: none;
+    }
+
+    .modal-content .modal-body thead th {
+        font-size: .75rem;
+        padding: .25rem .5rem;
+    }
+
+    .modal-content .modal-body th, tr, td {
+        font-size: .75rem;
+        padding: .25rem .5rem;
+    }
+
+    thead, tbody {
+        display: block;
+        width: 100%;
+    }
+}
+/*tablet*/
+@media screen and (max-width: 768px){
+    .main {
+        top: 45%;
+        transform: translate(-50%, -45%);
+    }
+
+    .main h1 {
+        font-size: 1.5rem;
+        padding: 0;
+    }
+
+    .btn-imsakiye {
+        font-size: 1.25rem;
+    }
+
+    #city {
+        font-size: 1.25rem;
+        position: relative;
+        padding: .6rem 1rem;
+    }
+
+    .container {
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -65%);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .container .date {
+        width: 70%;
+        font-size: 1.25rem;
+        margin-top: 1rem;
+    }
+
+    .container .date h2 {
+        font-size: 1.5rem;
+    }
+
+    .container .content {
+        width: 100%;
+        gap: .5rem;
+    }
+
+    .container .content .salah h3 {
+        font-size: 1.25rem;
+    }
+
+    .modal-content {
+        width: 90%;
+        height: 90%;
+    }
+
+    .modal-content .modal-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .modal-content .modal-header button {
+        font-size: 1.5rem;
+    }
+
+    .modal-content .modal-body th:nth-child(1) {
+        display: none;
+    }
+
+    .modal-content .modal-body td:nth-child(1) {
+        display: none;
+    }
+
+    .modal-content .modal-body thead th {
+        font-size: .75rem;
+        padding: .25rem .5rem;
+    }
+
+    .modal-content .modal-body th, tr, td {
+        font-size: .75rem;
+        padding: .25rem .5rem;
+    }
+
+    thead, tbody {
+        display: block;
+        width: 100%;
+    }
+}
+/* mobile */
+@media screen and (max-width: 425px) {
+    .main {
+        top: 45%;
+        transform: translate(-50%, -45%);
+    }
+
+    .main h1 {
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    .btn-imsakiye {
+        font-size: 1rem;
+    }
+
+    #city {
+        font-size: 1rem;
+        position: relative;
+        padding: .6rem 1rem;
+    }
+
+    .container {
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -65%);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .container .date {
+        width: 70%;
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+    .container .date h2 {
+        font-size: 1.25rem;
+    }
+
+    .container .content {
+        width: 100%;
+        gap: .5rem;
+    }
+
+    .container .content .salah h3 {
+        font-size: 1rem;
+    }
+
+    .modal-content {
+        width: 90%;
+        height: 90%;
+    }
+
+    .modal-content .modal-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .modal-content .modal-header button {
+        font-size: 1.5rem;
+    }
+
+    .modal-content .modal-body th:nth-child(1) {
+        display: none;
+    }
+
+    .modal-content .modal-body td:nth-child(1) {
+        display: none;
+    }
+
+    .modal-content .modal-body thead th {
+        font-size: .75rem;
+        padding: .25rem .5rem;
+    }
+
+    .modal-content .modal-body th, tr, td {
+        font-size: .75rem;
+        padding: .25rem .5rem;
+    }
+
+    thead, tbody {
+        display: block;
+        width: 97%;
+    }
+
 
 }
